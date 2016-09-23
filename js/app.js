@@ -139,7 +139,7 @@ $(document).ready( function() {
 	});
 	$('.inspiration-getter').submit(function(e){
 		e.preventDefault();
-		$('results').html('');
+		$('.results').html('');
 		var tag = $(this).find("input[name='answerers']").val();
 		getInspiration(tag);
 	})
