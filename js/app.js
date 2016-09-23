@@ -130,19 +130,17 @@ var getInspiration= function(tag) {
 
 $(document).ready( function() {
 	$('.unanswered-getter').submit( function(e){
+		e.preventDefault();
 		// zero out results if previous search has run
 		$('.results').html('');
 		// get the value of the tags the user submitted
 		var tags = $(this).find("input[name='tags']").val();
 		getUnanswered(tags);
-
-		return false
 	});
 	$('.inspiration-getter').submit(function(e){
+		e.preventDefault();
 		$('.results').html('');
 		var tag = $(this).find("input[name='answerers']").val();
 		getInspiration(tag);
-
-		return false
 	})
 });
