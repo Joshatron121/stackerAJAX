@@ -135,12 +135,14 @@ $(document).ready( function() {
 		$('.results').html('');
 		// get the value of the tags the user submitted
 		var tags = $(this).find("input[name='tags']").val();
+		$(this).find("input[name='tags']").val('');
 		getUnanswered(tags);
 	});
 	$('.inspiration-getter').submit(function(e){
 		e.preventDefault();
 		$('.results').html('');
 		var tag = $(this).find("input[name='answerers']").val();
+		$(this).find("input[name='answerers']").val('')
 		getInspiration(tag);
 	})
 });
